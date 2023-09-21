@@ -1,0 +1,24 @@
+%lex
+
+%%
+
+\d+ return 'NUMBER'
+
+/lex
+
+%%
+
+E 
+    : E + T
+    | T
+    ;
+
+T 
+    : T * F
+    | F
+    ;
+
+F 
+    : NUMBER
+    ;
+
